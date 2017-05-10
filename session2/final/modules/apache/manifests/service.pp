@@ -1,5 +1,4 @@
 class apache::service inherits apache {
-  include apache::config
   service {$service_name:
   ensure     => running,
   enable     => true,
