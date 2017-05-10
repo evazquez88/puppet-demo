@@ -19,34 +19,9 @@ class apache {
  }
  }
 
-  package {$package_name:
-   ensure => installed,
-  }
-
-  file {'$conf_file':
-    ensure  => file,
-    path    => "${apache_dir}/${$conf_file}",
-    owner   => root,
-    group   => root,
-    mode    => '0644',
-    require => Package[$package_name],
-    notify  => Service[$service_name],
-    source  => 'puppet:///modules/apache/$conf_file',
-  }
-
-  service {$service_name:
-  	ensure     => running,
-  	enable     => true,
-  	hasrestart => true,
-  	hasstatus  => true,
-  	subscribe  => File[$conf_file],
-}
-
-
-
- #include apache::install
- #include apache::service
- #include apache::config
+ include apache::install
+ include apache::service
+ include apache::config
 
 
 
