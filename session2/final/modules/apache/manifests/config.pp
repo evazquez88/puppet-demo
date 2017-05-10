@@ -8,6 +8,6 @@ class apache::config inherits apache {
     mode    => '0644',
     require => Package [$package_name],
     notify  => Service[$service_name],
-    source  => "puppet:///modules/apache/$conf_file"",
+    source  => "puppet:///modules/apache/$conf_file",
   }
 }
