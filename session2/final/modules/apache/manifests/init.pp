@@ -23,6 +23,4 @@ class apache {
  include apache::service
  include apache::config
 
-
-
 }   
