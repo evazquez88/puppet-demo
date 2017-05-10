@@ -3,7 +3,6 @@ class apache {
 
   $apache_dir      = '/etc/httpd'
   $apache_docroot  = '/var/www'
-  $package_name    = 'apache2'
 
   case $operatingsystem {
   	centos, redhat: {
