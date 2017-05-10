@@ -10,4 +10,4 @@ class apache::config inherits apache {
     notify  => Service[$service_name],
     source  => 'puppet:///modules/apache/$conf_file',
   }
-
+}

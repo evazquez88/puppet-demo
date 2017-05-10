@@ -5,7 +5,7 @@ class apache::service inherits apache {
   hasrestart => true,
   hasstatus  => true,
   require    => File[$conf_file],
-  subscribe  => File [$conf_file],
+  subscribe  => File[$conf_file],
 }
 }
 
